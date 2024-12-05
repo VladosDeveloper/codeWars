@@ -5,4 +5,10 @@ function solution(str) {
 }
 
 let text = solution('world')
-console.log(text)
+
+function numberToString(num) {
+	let covertedString = String(num)
+	return covertedString
+}
+
+let resolve = numberToString(1234)
