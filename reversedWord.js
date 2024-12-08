@@ -65,4 +65,33 @@ const areaOrPerimeter = function (l, w) {
 		return area
 	}
 }
+ 
+// boolToWord
+function boolToWord(bool) {
+	return bool == true ? 'Yes' : 'No'
+}
 
+// are you better than your class?
+function betterThanAverage(classPoints, yourPoints) {
+	const initialValue = 0
+	const sumClassPoints = classPoints.reduce(
+		(accumulator, currentValue) => accumulator + currentValue,
+		initialValue
+	)
+
+	const avaregeClassPoints = sumClassPoints / classPoints.length
+	if (avaregeClassPoints > yourPoints) {
+		return false
+	} else {
+		return true
+	}
+}
+
+//finding a needle
+function findNeedle(haystack) {
+	for (let i = 0; i < haystack.length; i++) {
+		if (haystack[i] === 'needle') {
+			return 'found the needle at position ' + i
+		}
+	}
+}
