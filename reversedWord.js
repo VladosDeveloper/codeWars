@@ -39,7 +39,7 @@ function findSmallestInt(arr) {
 
 let smallestInt = findSmallestInt([4, 10, 15, 6, 1])
 
-
+//rps
 const rps = (p1, p2) => {
 	if (p1 === 'scissors' && p2 === 'paper') {
 		return 'Player 1 won!'
@@ -54,4 +54,15 @@ const rps = (p1, p2) => {
 	}
 }
 
-rps('paper', 'paper')
+//Square area and rectangle perimetr
+const areaOrPerimeter = function (l, w) {
+	let area
+	if (l === w) {
+		area = l * w
+		return area
+	} else {
+		area = 2 * (l + w)
+		return area
+	}
+}
+
