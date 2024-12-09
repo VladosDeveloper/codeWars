@@ -1,4 +1,3 @@
-
 // Reverse entire string
 function solution(str) {
 	let reversedText = str
@@ -13,7 +12,6 @@ function numberToString(num) {
 	let covertedString = String(num)
 	return covertedString
 }
-
 
 //Finding positive number of array
 function positiveSum(arr) {
@@ -65,7 +63,7 @@ const areaOrPerimeter = function (l, w) {
 		return area
 	}
 }
- 
+
 // boolToWord
 function boolToWord(bool) {
 	return bool == true ? 'Yes' : 'No'
@@ -94,4 +92,31 @@ function findNeedle(haystack) {
 			return 'found the needle at position ' + i
 		}
 	}
+}
+
+//square number
+function squareSum(numbers) {
+	let squareNumber = 0
+	for (const number of numbers) {
+		squareNumber += Math.pow(number, 2)
+	}
+	return squareNumber
+}
+
+//finding vowels in string
+function getCount(str) {
+	let counterVowers = 0
+	let strInWord = str.split('')
+	let vowelnArray = ['a', 'e', 'i', 'o', 'u']
+
+	for (const vowel of strInWord) {
+		for (const letter of vowelnArray) {
+			if (vowel === letter) {
+				counterVowers++
+			} else {
+				continue
+			}
+		}
+	}
+	return counterVowers
 }
