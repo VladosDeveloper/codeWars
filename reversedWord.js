@@ -120,3 +120,34 @@ function getCount(str) {
 	}
 	return counterVowers
 }
+
+
+//basic mathematics operations
+function basicOp(operation, value1, value2) {
+	switch (operation) {
+		case '+':
+			return value1 + value2
+			break
+		case '-':
+			return value1 - value2
+			break
+		case '*':
+			return value1 * value2
+			break
+		case '/':
+			return value1 / value2
+			break
+	}
+	return 0
+}
+
+//searching friend
+function friend(friends) {
+	let output = []
+	for (const name of friends) {
+		if (name.length === 4) {
+			output.push(name)
+		}
+	}
+	return output
+}
