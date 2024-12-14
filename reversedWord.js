@@ -121,7 +121,6 @@ function getCount(str) {
 	return counterVowers
 }
 
-
 //basic mathematics operations
 function basicOp(operation, value1, value2) {
 	switch (operation) {
@@ -150,4 +149,34 @@ function friend(friends) {
 		}
 	}
 	return output
+}
+
+//pos and neg numbes in array
+function countPositivesSumNegatives(input) {
+	let posNumber = 0
+	let negNumber = 0
+	let returnedArray = []
+	if (input !== null && input.length !== 0) {
+		for (const posArrayNumber of input) {
+			if (posArrayNumber > 0) {
+				posNumber++
+			} else {
+				negNumber += posArrayNumber
+			}
+		}
+		const count = returnedArray.push(posNumber, negNumber)
+		return returnedArray
+	} else {
+		return returnedArray
+	}
+}
+
+//reverse every word in string
+function reverseWords(str) {
+	return str
+		.split(' ')
+		.map(word => {
+			return word.split('').reverse().join('')
+		})
+		.join(' ')
 }
