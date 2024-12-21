@@ -180,3 +180,31 @@ function reverseWords(str) {
 		})
 		.join(' ')
 }
+
+//pages and classmates
+function paperwork(n, m) {
+	if (n < 0 || m < 0) {
+		return 0
+	} else {
+		return n * m
+	}
+}
+
+//Even and Odd numbers
+function evenOrOdd(number) {
+	return number % 2 === 0 ? 'Even' : 'Odd'
+}
+
+//lowest and highest number in string
+function highAndLow(numbers) {
+	let nums = numbers.split(' ')
+	return `${Math.max(...nums)} ${Math.min(...nums)}`
+}
+
+//time in mls
+function past(h, m, s) {
+	// 1 hour is 3600000mls
+	// 1 min is 60000 mls
+	// 1 sec is 1000 mls
+	return h * 3600000 + m * 60000 + s * 1000
+}
