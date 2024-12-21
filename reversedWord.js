@@ -66,7 +66,7 @@ const areaOrPerimeter = function (l, w) {
 
 // boolToWord
 function boolToWord(bool) {
-	return bool == true ? 'Yes' : 'No'
+	return bool === true ? 'Yes' : 'No'
 }
 
 // are you better than your class?
@@ -205,6 +205,38 @@ function highAndLow(numbers) {
 function past(h, m, s) {
 	// 1 hour is 3600000mls
 	// 1 min is 60000 mls
-	// 1 sec is 1000 mls
+	// 1 sec is 1000 mlsstri
 	return h * 3600000 + m * 60000 + s * 1000
+}
+
+//is he survive?
+function hero(bullets, dragons) {
+	if (bullets / 2 >= dragons) {
+		return true
+	} else {
+		return false
+	}
+}
+ 
+//make negative
+function makeNegative(num) {
+	return num <= 0 ? num : num - num * 2
+}
+
+//reverse number
+function digitize(n) {
+	let string = String(n)
+	let stringArray = string.split('')
+	let numberArray = []
+	for (const num of stringArray) {
+		numberArray.push(Number(num))
+	}
+	return n !== 0 ? numberArray.reverse() : [0]
+}
+
+//average of array 
+function findAverage(array) {
+	let averageArray = array.reduce((acc, cur) => acc + cur, 0)
+	let result = averageArray / array.length
+	return array.length !== 0 ? result : 0
 }
