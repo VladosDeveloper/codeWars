@@ -240,3 +240,47 @@ function findAverage(array) {
 	let result = averageArray / array.length
 	return array.length !== 0 ? result : 0
 }
+
+//smallest word in string
+function findShort(s) {
+	let convertedString = s.split(' ')
+	let emptyArray = []
+	for (const str of convertedString) {
+		emptyArray.push(str.length)
+	}
+	return Math.min(...emptyArray)
+}
+
+// sum array
+function sum(numbers) {
+	return numbers !== 0 ? numbers.reduce((acc, cur) => acc + cur, 0) : 0
+}
+
+//sort number
+function descendingOrder(n) {
+	let convertedNumbers = ''
+	const compareFn = (a, b) => b - a
+	let toString = String(n)
+		.split('')
+		.map(x => Number(x))
+		.sort(compareFn)
+	for (const el of toString) {
+		convertedNumbers += el
+	}
+	return Number(convertedNumbers)
+}
+
+//series sum
+function SeriesSum(n) {
+	let initialValue = 1
+	let number = 0
+	if (n === 1) {
+		return Number.parseFloat(n).toFixed(2)
+	} else {
+		for (let i = 1; i <= n; i++) {
+			number += 1 / initialValue
+			initialValue += 3
+		}
+		return Number.parseFloat(number).toFixed(2)
+	}
+}
